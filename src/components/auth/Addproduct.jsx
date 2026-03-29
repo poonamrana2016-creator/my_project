@@ -39,7 +39,7 @@ export const Addproduct = () => {
     
 
     // API Calling below to add data in database
-    await axios.post(`${import.meta.env.PRODUCTION_URL}/product/add-product`,
+    await axios.post(`${import.meta.env.VITE_API_URL}/product/add-product`,
       data, {
         headers: {
           "Content-Type" : "multipart/form-data",
