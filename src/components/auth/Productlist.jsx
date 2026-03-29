@@ -11,7 +11,7 @@ const Productlist = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         async function getProducts() {
-            const { data } = await axios.get('http://localhost:9000/product/get-product',
+            const { data } = await axios.get(`${import.meta.env.PRODUCTION_URL}/product/get-product`,
                 {
                     headers: {
                         "Content-Type": "multipart/form-data",
